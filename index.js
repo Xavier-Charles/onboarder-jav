@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 // ask a question
 router.post("/ask-question", async (req, res) => {
   try {
-    data = await askQuestion(req.body.question);
+    let data = await askQuestion(req.body.question);
     res.status(200).json({
       status: 200,
       data: data,
