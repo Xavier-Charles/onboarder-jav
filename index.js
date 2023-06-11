@@ -16,6 +16,11 @@ app.options("*", cors()); // include before other routes
 app.use(express.json());
 app.use(router);
 
+// Create GET request
+app.get("/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 // ask a question
 router.post("/ask-question", async (req, res) => {
   try {
